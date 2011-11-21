@@ -164,7 +164,7 @@ namespace LibQGit2
             /**
              * Retrieve and resolve the reference pointed at by HEAD.
              */
-            QGitRef head();
+            QGitRef head() const;
 
             /**
              * Check if a repository's HEAD is detached
@@ -218,32 +218,32 @@ namespace LibQGit2
             /**
              * Lookup a reference by its name in a repository.
              */
-            QGitRef lookupRef(const QString& name);
+            QGitRef lookupRef(const QString& name) const;
 
             /**
              * Lookup a commit object from a repository.
              */
-            QGitCommit lookupCommit(const QGitOId& oid);
+            QGitCommit lookupCommit(const QGitOId& oid) const;
 
             /**
              * Lookup a tag object from the repository.
              */
-            QGitTag lookupTag(const QGitOId& oid);
+            QGitTag lookupTag(const QGitOId& oid) const;
 
             /**
              * Lookup a tree object from the repository.
              */
-            QGitTree lookupTree(const QGitOId& oid);
+            QGitTree lookupTree(const QGitOId& oid) const;
 
             /**
              * Lookup a blob object from a repository.
              */
-            QGitBlob lookupBlob(const QGitOId& oid);
+            QGitBlob lookupBlob(const QGitOId& oid) const;
 
             /**
              * Lookup a reference to one of the objects in a repostory.
              */
-            QGitObject lookupAny(const QGitOId& oid);
+            QGitObject lookupAny(const QGitOId& oid) const;
 
             /**
              * Create a new object id reference.
