@@ -40,6 +40,11 @@ QGitOId::~QGitOId()
 {
 }
 
+bool LibQGit2::QGitOId::isValid() const
+{
+    return ( !d.isEmpty() && (d != QByteArray(GIT_OID_RAWSZ, '\0')) );
+}
+
 QGitOId QGitOId::fromString(const QByteArray& string)
 {
     int len = qMin(string.length(), GIT_OID_HEXSZ);
